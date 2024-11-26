@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Nginx</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      color: #333;
+    }
+    .container {
+      text-align: center;
+      background: #fff;
+      padding: 20px 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #0078D7;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.2rem;
+      margin: 10px 0;
+    }
+    .time {
+      font-weight: bold;
+      color: #ff5722;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🚀 Welcome to Your Nginx Server! 🌐</h1>
+    <p>You've successfully deployed an Nginx web server with Docker!</p>
+    <p>Current Server Time: <span class="time" id="current-time"></span></p>
+    <p>Thank you for visiting. Have a great day! 😄</p>
+  </div>
+
+  <script>
+    function updateTime() {
+      const timeElement = document.getElementById('current-time');
+      const now = new Date();
+      const timeString = now.toLocaleTimeString();
+      timeElement.textContent = timeString;
+    }
+    setInterval(updateTime, 1000);
+    updateTime();
+  </script>
+</body>
+</html>
+
